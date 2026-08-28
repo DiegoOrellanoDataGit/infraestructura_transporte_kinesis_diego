@@ -1,0 +1,53 @@
+# ==============================================================================
+# ARTEFACTOS GRANDES Y TEMPORALES
+# ==============================================================================
+*.jar
+*.zip
+flink_content/
+target/
+
+# Capturas o pruebas locales que no deben ir al repo
+evidencia/
+*.png
+*.jpg
+*.jpeg
+*.gif
+
+# ==============================================================================
+# ESTADO LOCAL DE TERRAFORM
+# Nunca guardes el .tfstate local en Git; usaremos S3 para eso.
+# ==============================================================================
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+
+# Carpeta interna de trabajo de Terraform (contiene binarios de los providers)
+.terraform/
+
+# Archivo de bloqueo de versiones de providers
+.terraform.lock.hcl
+
+# ==============================================================================
+# ARCHIVOS DE VARIABLES Y SECRETOS
+# Contienen credenciales, tokens o variables sensibles específicas.
+# ==============================================================================
+*.tfvars
+*.auto.tfvars
+tfvars.json
+
+# Archivos de llaves privadas y credenciales de AWS
+aws_credentials
+*.pem
+*.key
+*.crt
+
+# ==============================================================================
+# ARCHIVOS TEMPORALES Y DE EDITORES DE CÓDIGO
+# ==============================================================================
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+*.log
